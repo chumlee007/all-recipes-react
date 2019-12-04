@@ -1,0 +1,16 @@
+#recipe {
+	.image {
+		border: 1px solid black;
+		width: 320px;
+		height: 320px;
+		overflow: hidden;
+		margin-bottom: 2em;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			object-position: left center;
+		}
+	}
+}
