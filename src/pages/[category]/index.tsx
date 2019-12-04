@@ -17,7 +17,7 @@ const Category: NextPage<Props> = ({ meals, categorySlug }) => {
 			<section className="listing">
 				{meals.map((meal, index) => 
 					<React.Fragment key={`link-${index}`}>
-						<Link href="[category]/[recipe]" as={`/${categorySlug}/${meal.id}`}>
+						<Link href="/[category]/[recipe]" as={`/${categorySlug}/${meal.id}`}>
 							<a className="card">
 								<div className="thumb">
 									<img src={meal.thumb} alt={meal.name} />

@@ -63,7 +63,7 @@ Recipe.getInitialProps = async({ query }): Promise<any> => {
 	let instructions: string = '';
 	let ingredients: any[] = [];
 	let source: string = '';
-
+	
 	if (recipeId) {
 		const { data } = await $http.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`, {
 			transformResponse: normalizeRecipe

@@ -18,16 +18,18 @@ export const normalizeCategories = (data: any): Category[] => {
 
 export const normalizeMeals = (data: any): Meal[] => {
 	try {
-		const { meals } = JSON.parse(data);
+		if (data) {
+			const { meals } = JSON.parse(data);
 
-		return meals.map((m:any): Meal => {
-			return  {
-				id: m.idMeal,
-				name: m.strMeal,
-				slug: slugify(m.strMeal),
-				thumb: m.strMealThumb,
-			}
-		});
+			return meals.map((m:any): Meal => {
+				return  {
+					id: m.idMeal,
+					name: m.strMeal,
+					slug: slugify(m.strMeal),
+					thumb: m.strMealThumb,
+				}
+			});
+		}
 	} catch(err) {
 		throw Error(`Error parsing response data - ${JSON.stringify(err)}`);
 	}

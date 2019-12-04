@@ -5,7 +5,6 @@ const webpack = require('webpack');
 
 module.exports = withSass(withCss({
 	target: 'server',
-	exportTrailingSlash: true,
 	webpack: (config, {}) => {
 		config.resolve.alias = {
 			...config.resolve.alias,

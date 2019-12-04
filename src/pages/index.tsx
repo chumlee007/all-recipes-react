@@ -16,7 +16,7 @@ const Index: NextPage<Props> = ({ categories }) => {
 			<section className="listing">
 				{categories.map((cat, index) => 
 					<React.Fragment key={`link-${index}`}>
-						<Link href="[category]" as={`/${cat.slug}`}>
+						<Link href="/[category]" as={`/${cat.slug}`}>
 							<a className="card">
 								<div className="thumb">
 									<img src={cat.thumb} alt={cat.name} />
